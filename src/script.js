@@ -25,7 +25,7 @@ const getBicicletas = async () => {
   // fetch with no cors mode
 
   const response = await fetch(
-    `${process.env.API_URL}/bicicletas`
+    `https://expressjs-postgres-production-0056.up.railway.app/bicicletas`
   );
 
   const data = await response.json();
@@ -36,13 +36,11 @@ const getBicicletas = async () => {
   }
 };
 
-
-
 const getCascos = async () => {
   // fetch with no cors mode
 
   const response = await fetch(
-    `${process.env.API_URL}/cascos`
+    `https://expressjs-postgres-production-0056.up.railway.app/cascos`
   );
 
   const data = await response.json();
