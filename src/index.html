@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="flow-root">
+  <nav class="mx-auto mt-2 navbar bg-base-100 max-w-7xl">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="p-2 mt-3 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+          <li><a>Item 1</a></li>
+          <li tabindex="0">
+            <a class="justify-between">
+              Parent
+              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+              </svg>
+            </a>
+            <ul class="p-2">
+              <li><a>Submenu 1</a></li>
+              <li><a>Submenu 2</a></li>
+            </ul>
+          </li>
+          <li><a>Item 3</a></li>
+        </ul>
+      </div>
+      <a class="text-3xl font-bold normal-case btn btn-ghost"><span class="text-primary">Velo</span>Bike</a>
+    </div>
+    <div class="hidden navbar-center lg:flex">
+      <ul class="p-0 menu menu-horizontal">
+        <li><a>Item 1</a></li>
+        <li tabindex="0">
+          <a>
+            Parent
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+              <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+            </svg>
+          </a>
+          <ul class="p-2 bg-base-200">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a class="hidden btn btn-primary sm:flex" href="#acerca-de">Ver cómo se realizó la página</a>
+      <a class="flex btn btn-primary sm:hidden" href="#acerca-de">Detalles</a>
+    </div>
+  </nav>
+
+  <header
+    class="grid-cols-2 px-4 pb-8 mx-auto mt-12 space-y-8 md:space-y-0 md:grid py-14 max-w-7xl text-primary-content">
+    <div class="flex items-center justify-center md:justify-start">
+      <img class="w-full max-w-md mt-3" src="../assets/girl_bike.svg" alt="">
+    </div>
+
+    <div class="grid grid-cols-2 gap-5">
+      <div class="col-span-2">
+        <h2 class="font-semibold text-neutral-content">Hot sales</h2>
+        <p class="my-4 text-4xl font-semibold">Tenemos las mejores bicicletas con el mejor servicio y la mejor garantía.
+          Varios Tamaños y Colores.</p>
+
+      </div>
+      <div class="flex items-center justify-center col-span-1 text-center rounded-lg bg-accent/80">
+        <div>
+          <h3 class="text-5xl font-bold">100k</h3>
+          <p class="">clientes</p>
+        </div>
+      </div>
+      <div class="col-span-1 text-neutral-content">
+        <h2>Lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque illo quod alias cumque fuga optio porro
+          et repellat aspernatur, a ccusamus unde ab minima! Labore dignissimos delectus eveniet, quae praesentium
+          aperiam?</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-12 mt-12 bg-base-200">
+    <h1 class="px-4 mx-auto text-4xl font-bold max-w-7xl">Bicicletas</h1>
+    <div id="bicicletas-wrapper"
+      class="max-w-7xl mx-auto px-4 mt-4 grid items-start grid-cols-[repeat(auto-fit,minmax(280px,_1fr))] gap-4 md:gap-8">
+    </div>
+
+    <h1 class="px-4 mx-auto text-4xl font-bold max-w-7xl mt-7">Cascos</h1>
+    <div id="cascos-wrapper"
+      class="max-w-7xl mx-auto px-4 mt-4 grid items-start grid-cols-[repeat(auto-fit,minmax(280px,_1fr))] gap-4 md:gap-8">
+    </div>
+  </main>
+
+  <div class="max-w-2xl px-4 py-12 mx-auto space-y-4">
+    <h2 id="acerca-de" class="text-3xl font-semibold">Sobre la página para Programación Web</h2>
+    <hr>
+    <div>
+      <h3 class="text-xl">
+        Herramientas utilizadas front end:
+      </h3>
+      <div class="text-lg badge badge-primary">TailwindCSS</div>
+      <div class="mt-1 text-lg badge badge-primary">DaisyUI</div>
+    </div>
+
+    <div>
+      <h3 class="text-xl">
+        Herramientas utilizadas back end (ambas hosteadas en railway):
+      </h3>
+      <div class="text-lg badge badge-secondary">NodeJS con Express</div>
+      <div class="mt-1 text-lg badge badge-secondary">PostgreSQL</div>
+    </div>
+
+    <div>
+      <h3 class="text-xl">Link de la api en express para obtener las bicicletas:</h3>
+      <a class=" text-accent" href="https://expressjs-postgres-production-0056.up.railway.app/bicicletas"
+        target="_blank">https://expressjs-postgres-production-0056.up.railway.app/bicicletas</a>
+    </div>
+
+    <div>
+      <h3 class="text-xl">Link de la api en express para obtener los cascos:</h3>
+      <a class=" text-accent" href="https://expressjs-postgres-production-0056.up.railway.app/cascos"
+        target="_blank">https://expressjs-postgres-production-0056.up.railway.app/cascos</a>
+    </div>
+
+    <div>
+      <h3 class="text-xl">Consulta en postgres para las bicicletas:</h3>
+      <img class="w-full max-w-xl mt-2" src="../assets/screenshot1.png" alt="railway captura">
+    </div>
+
+    <div>
+      <h3 class="text-xl">Consulta en postgres para los cascos:</h3>
+      <img class="w-full max-w-xl mt-2" src="../assets/screenshot2.png" alt="railway captura">
+    </div>
+
+    <div>
+      <h3 class="text-xl">Código express para crear las rutas de la api</h3>
+      <img class="w-full max-w-xl mt-2" src="../assets/captura3.png" alt="railway captura">
+
+    </div>
+
+  </div>
+
+  <footer class="bg-neutral text-neutral-content">
+    <div class="p-10 px-4 mx-auto footer max-w-7xl">
+      <div>
+        <span class="footer-title">Servicios</span>
+        <a class="link link-hover">Diseño</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Publicidad</a>
+      </div>
+      <div>
+        <span class="footer-title">Empresa</span>
+        <a class="link link-hover">Sobre nosotros</a>
+        <a class="link link-hover">Contacto</a>
+      </div>
+      <div>
+        <span class="footer-title">Legal</span>
+        <a class="link link-hover">Términos de uso</a>
+        <a class="link link-hover">Política de cookies</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
